@@ -1,7 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import {render} from "react-dom";
 
-ReactDOM.render(
-  <h1>Hello, Lane!</h1>,
-  document.getElementById('root')
-);
+import Map from "./map";
+
+render(<Map/>, document.getElementById("root"));
