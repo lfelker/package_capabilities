@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-
-// ES6 
 import ReactMapboxGl, { Layer, Feature } from "react-mapbox-gl";
 // import config from "./config.json";
+import style from './map-style.js'
 
 // const { accessToken } = config;
 export default class ReactMapbox extends Component {
@@ -17,10 +16,7 @@ export default class ReactMapbox extends Component {
 				  style="mapbox://styles/mapbox/streets-v8"
 				  accessToken="pk.eyJ1IjoibGFuZWZlbGtlciIsImEiOiJjajBjdW1jNTAwM3ppMnhwZ2RyNXB0NDhzIn0.3L7Yzv7pPdG9MXnceUGvpA"
 				  center={this.state.center}
-				  containerStyle={{
-				    height: "100vh",
-				    width: "100vw"
-				  }}>
+				  containerStyle={style.container}>
 				  <Layer
 			      type="symbol"
 			      id="marker"
