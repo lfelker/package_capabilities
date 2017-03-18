@@ -22,36 +22,20 @@ export default class ReactMapbox extends Component {
 		super();
     this.state = {
       map: initial_state,
-      delivery_locations: [],
-      fit_bounds: {}
+      delivery_locations: []
     };
   }
 
   // called before rendering
   componentWillMount() {
-  	this.setState({delivery_locations: getDeliveryPoints()}, function() {
-  		// process for retrieving bounds of points
-  		var coords = this.state.delivery_locations.map(location => {
-	  		//console.log(location);
-	  		var coord = {
-	  			latitude: location.Latitude,
-	  			longitude: location.Longitude
-	  		}
-	  		return coord;
-	  	})
-	  	var bounds = geolib.getBounds(coords);
-	  	console.log(bounds);
-	  	var structuredBounds = [[bounds.minLng, bounds.minLat], [bounds.maxLng, bounds.maxLat]];
-	  	console.log(structuredBounds);
-	  	this.setState({fit_bounds: structuredBounds});
-	  });
+  	this.setState({delivery_locations: getDeliveryPoints()});
   }
 
 	render() {
 		return (
 			<Router>
 				<Route exact={true} path="/" render={() => (
-					<MapView map_data={this.state}/>
+					<MapView delivery_locations={this.state.delivery_locations} map_data={this.state.map} />
 				)}/>
 			</Router>
 		);
@@ -60,7 +44,25 @@ export default class ReactMapbox extends Component {
 
 class MapView extends Component {
 
-	state = this.props.map_data
+	state = {
+		delivery_locations: this.props.delivery_locations,
+		map_data: this.props.map_data
+	};
+
+	componentWillMount() {
+		// discover bounds of delivery_locations
+		var coords = this.state.delivery_locations.map(location => {
+  		var coord = {
+  			latitude: location.Latitude,
+  			longitude: location.Longitude
+  		}
+  		return coord;
+  	})
+  	var bounds = geolib.getBounds(coords);
+  	var structuredBounds = [[bounds.minLng, bounds.minLat], [bounds.maxLng, bounds.maxLat]];
+  	console.log(structuredBounds);
+  	this.setState({fit_bounds: structuredBounds});
+	}
 
 	_onControlClick = (map, zoomDiff) => {
 	    const zoom = map.getZoom() + zoomDiff;
@@ -102,11 +104,11 @@ class MapView extends Component {
 				<ReactMapboxGl
 				  style="mapbox://styles/mapbox/streets-v8"
 				  accessToken="pk.eyJ1IjoibGFuZWZlbGtlciIsImEiOiJjajBjdW1jNTAwM3ppMnhwZ2RyNXB0NDhzIn0.3L7Yzv7pPdG9MXnceUGvpA"
-				  center={this.props.map_data.map.center}
-				  zoom={this.props.map_data.map.zoom}
+				  center={this.state.map_data.center}
+				  zoom={this.state.map_data.zoom}
 				  containerStyle={style.container}
           onDrag={this._onDrag}
-          fit_bounds={this.state.fit_bounds}
+          fitBounds={this.state.fit_bounds}
 				  >
 
 				  <Layer
@@ -116,7 +118,7 @@ class MapView extends Component {
 			      layout={{ "icon-image": "marker-15" }}
 			      >
 		      	{
-		      		this.props.map_data.delivery_locations
+		      		this.state.delivery_locations
 		      			.map( (location, i) => (
 			      			<Feature
 			      				key={i}

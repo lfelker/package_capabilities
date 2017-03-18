@@ -1,6 +1,5 @@
 {
-	"center": [-122.240146, 47.758896],
-	"zoom": [14],
 	"skip": 0,
-    "popupShowLabel": true
+    "popupShowLabel": true,
+    "fit_bounds": [[-0.122555629777, 51.4734862092], [-0.114842, 51.50621]]
 }
