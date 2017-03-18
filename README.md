@@ -16,3 +16,12 @@ This command just calls two other npm run: runs
 
 - `npm run build-dev`: runs `webpack -w`)
 - `npm run app`: runs `node server.js`
+
+# Testing Other Source Data
+
+run python script in main directory of project called csvToJson.py if starting with csv data
+format: `csvToJson.py -i <path to inputfile> -o <path to outputfile>`
+
+make output destination src/state/
+
+you must modify the data location input source in src/map.js as well
