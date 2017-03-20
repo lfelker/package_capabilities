@@ -29,7 +29,7 @@ make output destination src/state/
 you must modify the data location input source in src/main.js as well
 
 # Notes About Implementation
-- The map shows the optimized route between all points in the souce .json file, specefied at the top of src/main.js
+- The map shows the optimized route between all points in the souce .json file, specified at the top of src/main.js
 - The first point in the json source file is set to be the start and end location of the 'vehicle' that is visiting every point.
 - If you want to visualize the data of each point (like address), simply click on the point.
 - If an error ocurs in the route optimization calculation no route will be visualized. This will occur if not route is possible (like if a point in the source data is not reachable by car or it is across an ocean from the other data).
