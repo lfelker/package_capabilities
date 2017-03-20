@@ -1,7 +1,8 @@
 # Installation
-Download source code
-install npm if you do not have it
-run `npm install` in the downloaded directory
+- Download the source code to the directory you want to work in
+'git clone [CLONE URL]'
+- install npm if you do not have it
+- run `npm install` in the downloaded directory
 
 # Running the website
 
