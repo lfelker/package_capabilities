@@ -1,0 +1,35 @@
+[
+    {
+        "Longitude": "-86.817318",
+        "AddressLine2": "Nash",
+        "location": [
+            "-86.817318",
+            "36.12749"
+        ],
+        "AddressLine1": "78 Wyn Oak",
+        "Latitude": "36.12749",
+        "WorkArea": "Lane"
+    },
+    {
+        "Longitude": "-86.841796",
+        "AddressLine2": "",
+        "location": [
+            "-86.841796",
+            "36.13964"
+        ],
+        "AddressLine1": "Star",
+        "Latitude": "36.13964",
+        "WorkArea": ""
+    },
+    {
+        "Longitude": "-87.18094",
+        "AddressLine2": "",
+        "location": [
+            "-87.18094",
+            "36.170733"
+        ],
+        "AddressLine1": "",
+        "Latitude": "36.170733",
+        "WorkArea": ""
+    }
+]

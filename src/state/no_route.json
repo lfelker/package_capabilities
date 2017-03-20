@@ -1,0 +1,68 @@
+[
+    {
+        "Longitude": "-86.817318",
+        "AddressLine2": "Nash",
+        "location": [
+            "-86.817318",
+            "36.12749"
+        ],
+        "AddressLine1": "78 Wyn Oak",
+        "Latitude": "36.12749",
+        "WorkArea": "Lane"
+    },
+    {
+        "Longitude": "-86.841796",
+        "AddressLine2": "",
+        "location": [
+            "-86.841796",
+            "36.13964"
+        ],
+        "AddressLine1": "Star",
+        "Latitude": "36.13964",
+        "WorkArea": ""
+    },
+    {
+        "Longitude": "-87.18094",
+        "AddressLine2": "",
+        "location": [
+            "-87.18094",
+            "36.170733"
+        ],
+        "AddressLine1": "",
+        "Latitude": "36.170733",
+        "WorkArea": ""
+    },
+    {
+        "Longitude": "-89.977505",
+        "AddressLine2": "",
+        "location": [
+            "-89.977505",
+            "35.237562"
+        ],
+        "AddressLine1": "",
+        "Latitude": "35.237562",
+        "WorkArea": ""
+    },
+    {
+        "Longitude": "-88.971641",
+        "AddressLine2": "",
+        "location": [
+            "-88.971641",
+            "37.318447"
+        ],
+        "AddressLine1": "",
+        "Latitude": "37.318447",
+        "WorkArea": ""
+    },
+    {
+        "Longitude": "-86.478402",
+        "AddressLine2": "",
+        "location": [
+            "-86.478402",
+            "29.083146"
+        ],
+        "AddressLine1": "",
+        "Latitude": "29.083146",
+        "WorkArea": ""
+    }
+]

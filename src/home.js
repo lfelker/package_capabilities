@@ -9,9 +9,9 @@ export default class ReactMapbox extends Component {
 
 	constructor() {
 		super();
-    this.state = {
-      map: initial_state,
-      delivery_locations: locations
+  	this.state = {
+    	map: initial_state,
+    	delivery_locations: locations
     };
   }
 

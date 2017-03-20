@@ -18,7 +18,6 @@ export default class MapView extends Component {
 	};
 
 	componentWillMount() {
-		// discover bounds of delivery_locations
 		var structuredBounds = this._calculateBounds();
   	this.setState({fit_bounds: structuredBounds});
 
@@ -27,28 +26,28 @@ export default class MapView extends Component {
 
 	  // get optimized route between delivery locations
 		ghOpt.doRequest(route_request)
-	     .then(json => {
-	        var geoJson = {
-	        	"type": "FeatureCollection",
-    				"features": []
-	        }
+	    .then(json => {
+        var geoJson = {
+        	"type": "FeatureCollection",
+  				"features": []
+        }
 
-	        var points = json.solution.routes[0].points;
-	        for (var i = 0; i < points.length; i++) {
-	        	geoJson.features.push({
-	        			"type": "Feature",
-				        "geometry": points[i]
-	        	});
-	        }
+        var points = json.solution.routes[0].points;
+        for (var i = 0; i < points.length; i++) {
+        	geoJson.features.push({
+        			"type": "Feature",
+			        "geometry": points[i]
+        	});
+        }
 
-	        this.setState({route_layer: geoJson});
-	        if (this.state.map_reference) {
-	        	this._addLayer(this.state.map_reference, geoJson);
-	        }
-	     })
-	     .catch(function(err){
-	        console.error(err.message);
-	     });
+        this.setState({route_layer: geoJson});
+        if (this.state.map_reference) {
+        	this._addLayer(this.state.map_reference, geoJson);
+        }
+	    })
+	    .catch(function(err){
+	      console.error(err.message);
+	    });
 	}
 
 	// returns bounds in MapBox bounds format
