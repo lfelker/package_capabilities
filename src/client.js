@@ -1,6 +1,6 @@
 import React from "react";
 import {render} from "react-dom";
 
-import Map from "./map";
+import Home from "./home";
 
-render(<Map/>, document.getElementById("root"));
+render(<Home/>, document.getElementById("root"));

@@ -1,0 +1,7 @@
+{
+    "configuration": {
+      "routing": {
+        "calc_points": true
+      }
+    }
+}

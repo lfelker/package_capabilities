@@ -1,0 +1,5 @@
+{
+  "mapBoxToken": "pk.eyJ1IjoibGFuZWZlbGtlciIsImEiOiJjajBjdW1jNTAwM3ppMnhwZ2RyNXB0NDhzIn0.3L7Yzv7pPdG9MXnceUGvpA",
+  "mapStyle": "mapbox://styles/mapbox/streets-v8",
+  "graphHopperToken": "758fc3b8-2fb0-48fd-bd5a-067865a675ac"
+}
