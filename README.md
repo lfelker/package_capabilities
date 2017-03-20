@@ -2,7 +2,7 @@
 - Download the source code to the directory you want to work in
 'git clone [CLONE URL]'
 - install npm if you do not have it
-- run `npm install` in the downloaded directory
+- after downloading npm, run `npm install` in the downloaded directory to get all the node modules used in the project
 
 # Running the website
 
